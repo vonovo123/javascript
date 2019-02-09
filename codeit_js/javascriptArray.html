@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var brands = ['Apple', 'Coca-Cola', 'Startbucks'];
+
+	//배열의 길이 length
+	console.log(brands.length); // 3
+
+	//배열에서 특정 값 찾기 indexOf()
+	console.log(brands.indexOf('Startbucks')); // 2
+
+	//배열에 값 추가 push
+	brands.push('kakao');
+
+	//배열에서 값 빼기 pop()
+	var lastBrand = brands.pop();
+	console.log(lastBrand);
+	console.log(brands);
+
+	//배열을 문자열로 바꾸기 join()
+	console.log(brands.join()); // Apple,Coca-Cola,Starbucks
+
+	//쉼표대신 다른 문자를 사용하고 싶다면
+	console.log(brands.join('###')); //Apple###Coca-Cola###Starbucks
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	// 현재 날짜로 설정
+	var date = new Date();
+
+	//원하는 날짜로 설정
+	//1988년 6월 11일 5시 25분 30초
+	var date1 = new Date('June 11, 1988 05:25:30');
+	var date2 = new Date('1988-06-11T05:25:30');
+	//1988년 12월 15일 (날짜만)
+	var date3 = new Date('1992-12-15');
+	var date4 = new Date('12/15/1999');
+	var date5 = new Date('December 15 1999');
+	var date6 = new Date('Dec 15 1999');
+
+	//다양한 날짜정보 받아오기 기능
+	console.log(date.getFullYear()); // 1988
+	console.log(date.getMonth()); // 5
+	console.log(date.getDate()); // 11
+	console.log(date.getDay()); // 6
+	console.log(date.getHours()); // 5
+	console.log(date.getMinutes()); // 25
+	console.log(date.getSeconds()); // 30
+	console.log(date.getMilliseconds()); // 0
+	console.log(date.toString()); // Sat Jun 11 1988 05:25:30 GMT+1000 (KDT)
+	console.log(date.toLocaleString()); // 6/11/1988 5:25:30 AM
+	console.log(date.toLocaleDateString()); // 6/11/1988
+	console.log(date.toLocaleTimeString()); // 5:25:30 AM
+
+	//1970년 1월 1일 기준 몇 ms가 지났을까?
+	console.log(date.getTime());
+
+	//응용
+	var date = new Date('June 11, 1988 05:25:30');
+	console.log(date.getTime() + 'ms');
+	console.log(date.getTime()/1000 + '초');
+	console.log(date.getTime()/1000/60 + '분	');
+	console.log(date.getTime()/1000/60/60 + '시간');
+	
+	
+</script>
+</body>
+</html>

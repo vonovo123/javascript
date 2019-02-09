@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javaScript intro</title>
+</head>
+<body>
+<script type="text/javascript">
+var brands = [
+	['iPhone', 'iMac', 'Macbook'],
+	['Coke', 'Diet Coke'],
+	['Americano', 'Latte', 'Tea']
+];
+
+var person = {
+	name: "Donwook",
+	age: 30,
+	nationality : "Korea"
+};
+
+console.log(person["name"]);
+console.log(person.name)
+
+function logTask(task) {
+	console.log(task + ": 완료");
+	console.log("-");
+}
+
+logTask("보고서 작성");
+
+console.log(parseInt('100세'))
+/*
+switch (inputNumber) {
+	case '0':
+		alert('Zero!');
+		break;
+	case '1':
+		alert('One!');
+		break;
+	case '7':
+		alert('Lucky!');
+		break;
+	default:
+		alert('unLucky!');
+		break;
+}
+*/
+
+var brands = ['Apple', 'Coke','Starbucks']
+
+for (var i = 0; i < 3; i ++){
+	console.log(brands[i])
+}
+
+</script>
+</body>
+</html>
