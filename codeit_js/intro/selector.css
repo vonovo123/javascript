@@ -1,0 +1,28 @@
+/*태그 선택자*/
+h1 {}
+/*클래스 & Id*/
+.important{}
+#favorite{}
+
+/*children div 클래스를 가지는 요소의 자식중 모든 <i> 태그*/
+.div i{}
+
+/*직속 자식 div1 클래스를 가지고 있는 요소의 직속 자식 중 모든 <i> 태그*/
+.div > i{}
+
+/*복수 선택 'two' class를 가진 태그 모두와 'four'클래스를 가진 태그 모두*/
+.two, .four{}
+
+/*여러조건 'outside* class를 가지고 있으면서 'one'class 도 가지고 있는 태그*/
+.outside.one{}
+
+/*n번째 자식 .div1의 자식인 <p> tag 중 첫번째*/
+.div1 p:first-child{}
+/*n번째 자식 .div1의 자식인 <p> tag 중 마지막*/
+.div1 p:last-child{}
+/*n번째 자식 .div1의 자식인 <p> tag 중 마지막이 아닌*/
+.div1 p:not(:last-child){}
+
+/*마우스 오버*/
+h1{}
+h1:hover{}
