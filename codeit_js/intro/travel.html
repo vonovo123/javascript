@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Website</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/travel_styles.css">
+</head>
+<body>
+  <img id="logo" src="images/logo.png" width="165" height="58">
+ 
+  <div id="menu">
+    <a id='Home'>Home</a>
+    <a id='Seoul'>Seoul</a>
+    <a id='Tokyo'>Tokyo</a>
+    <a id='Paris'>Paris</a>
+  </div>
+
+  <img id="photo" src="images/home.png" width="90%">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="js/js_diction.js"></script>
+  <script>
+
+    $('#menu a').on('click', selectMenu);
+    $(document).on('keypress', selectMenu);
+    // 사진을 바꿔주는 함수
+    function selectMenu(e) {
+      var selectedId = '';
+      if(e.type === 'click'){
+        selectedId = e.currentTarget.id;
+
+      } else if(e.type === 'keypress' ){
+        if(event.key === '1'){
+          selectedId = 'Home';
+        }else if(e.key === '2'){
+          selectedId = 'Seoul';
+        }else if(e.key === '3'){
+          selectedId = 'Tokyo';
+        }else if(e.key === '4'){
+          selectedId = 'Paris';
+        }else{
+          selectedId = 'Home';
+        }
+      }
+      var arrayId = ['Home', 'Seoul', 'Tokyo', 'Paris'];
+      console.log(selectedId);
+      $('#photo').hide()
+      $('#photo').attr('src', 'images/' + selectedId +".png" );
+      $('#photo').fadeIn(3000);
+      $('#menu a').css('font-weight', 'normal');
+      $('#' + selectedId).css('font-weight', 'bold');
+    
+    }    
+  </script>
+</body>
+</html>
