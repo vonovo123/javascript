@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>가변인자함수</title>
+</head>
+<body>
+<script type="text/javascript">
+	function variableArgument(){
+		var length = arguments.length;
+
+		if(length == 0){
+			console.log('no argument');
+		}else if(length == 1){
+			console.log('one argument');
+		}else if(length == 2){
+			console.log('two argument');
+		}else{
+			console.log('many argument');
+		}
+	}
+	variableArgument(1,2 ,3 ,4 ,5 ,6 );
+</script>
+</body>
+</html>

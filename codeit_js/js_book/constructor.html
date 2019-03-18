@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function Student(name, korean, math, english, science){
+		this.name = name;
+		this.korean = korean;
+		this.math = math;
+		this.english = english;
+		this.science = science;
+
+	}
+
+	Student.prototype.getSum = function(){
+		return this.korean + this.math + this.english + this.science;
+	}	
+
+	Student.prototype.getAverage = function(){
+		return this.getSum() / 4;
+	}	
+	
+	Student.prototype.toString = function(){
+		return this.name + '\t' + this.getSum() + '\t' + this.getAverage();
+	}	
+	
+	var student = new Student('yoon', 96, 98, 92, 98);
+
+	var students = [];
+	students.push(new Student('yoon', 96, 98, 92, 98));
+	students.push(new Student('kim', 86, 88, 82, 88));
+
+	var output = 'name\ttotal\tavg\n';
+
+	for(var i in students){
+		output += students[i].toString() + '\n';
+	}
+	console.log(output);
+</script>
+</body>
+</html>

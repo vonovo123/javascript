@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	const originalArray = [1, 2, 3, 4, 5];
+
+	const newArray = [...originalArray];
+
+	originalArray[0] = 52;
+	originalArray[1] = 273;
+	console.log(originalArray);
+	console.log(newArray);
+
+	const mergiArray = [...originalArray, ...newArray];
+	console.log(mergiArray);
+</script>
+</body>
+</html>

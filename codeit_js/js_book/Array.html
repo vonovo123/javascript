@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var array = [52, 273, 103, 32];
+	array.sort();
+
+	console.log(array);
+
+
+
+	var array = [52, 273, 103, 32];
+	
+	array.sort(function(left, right){
+		return left - right;
+	});
+
+	console.log(array);
+
+	function Student(name, korean, math, english, science) {
+		this.name = name;
+		this.korean = korean;
+		this.math = math;
+		this.english = english;
+		this.science = science;
+
+		this.getSum = function() {
+			return this.korean + this.math + this.english + this.science;
+		}
+
+		this.getAverage = function() {
+			return this.getSum() / 4;
+		}
+
+		this.toString = function() {
+			return this.name + '\t' + this.korean + '\t' + this.math + '\t' + this.english + '\t' + this.science;
+		}
+	}
+
+	var students = [];
+
+	students.push(new Student('yoon', 96, 98, 92, 98));
+	students.push(new Student('youn', 92, 94, 88, 98));
+	students.push(new Student('kim', 90, 87, 85, 91));
+	students.push(new Student('lee', 100, 87, 85, 91));
+	students.push(new Student('hee', 80, 81, 84, 80));
+	
+	students.sort(function(left, right){
+		return right.getSum() - left.getSum();
+	});
+	
+	students = students.slice(0,3);
+	
+	var output = 'name\ttotal\tavg\n';
+	for(var i in students) {
+		output += students[i].toString() + '\n';
+	}
+	alert(output);
+
+	Array.prototype.remove = function (index) {this.splice(index, 1); }
+
+	var array = [52, 273, 103, 32, 274, 129];
+
+	for (var i = array.length - 1; i >= 0; i--){
+		if( array[i] > 100) {
+			array.remove(i);
+		}
+	}
+
+	alert(array);
+</script>
+</body>
+</html>

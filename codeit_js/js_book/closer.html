@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>클로저</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	function test(name){
+		var output = 'Hello' + name + '...!';
+			return function(){
+				alert(output);
+			};
+	}
+
+	var test_1 = test('go');
+	test_1();
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var numberFromLiteral = 273;
+	var numberFromObject = new Number(273);
+
+	var output = '';
+	output += '1. ' + typeof (numberFromLiteral) + '\n';
+	output += '2. ' + typeof (numberFromObject) + '\n';
+	
+	console.log(output);
+
+	if( typeof (numberFromLiteral) == 'number') {
+		console.log('numberFromLiteral is Number');
+	}
+
+
+	if( typeof (numberFromObject) == 'number') {
+		console.log('numberFromLiteral is Number');
+	}
+
+	if( numberFromLiteral.constructor == Number) {
+		console.log('numberFromLiteral is Number');
+	}
+
+
+	if( numberFromObject.constructor == Number) {
+		console.log('numberFromLiteral is Number');
+	}
+	
+</script>
+</body>
+</html>

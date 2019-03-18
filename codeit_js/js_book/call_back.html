@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>콜백함수</title>
+</head>
+<body>
+<script type="text/javascript">
+	function callTenTimes(callback){
+		for (var i = 0; i < 10 ; i++) {
+			callback();
+		}
+	}
+
+	/*var callback = function(){
+			alert('함수호출');
+	}*/
+
+	callTenTimes(function(){
+		alert('함수호출');
+	});
+</script>
+</body>
+</html>

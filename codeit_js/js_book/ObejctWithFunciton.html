@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+function makeStudent(name, korean, math, english, science){
+	var willReturn = {
+		name : name,
+		korean : korean,
+		math : math,
+		english : english,
+		science: science,
+
+		getSum : function(){
+			return this.korean + this.math + this.english + this.science;
+		},
+
+		getAverage: function(){
+			return this.getSum() / 4;
+		},
+
+		toString: function(){
+			return this.name + '\t' + this.getSum() + '\t' + this.getAverage();
+		}
+	}
+	return willReturn;	
+}
+
+var students = [];
+
+students.push(makeStudent('yoon', 87, 98, 88, 95));
+students.push(makeStudent('youn', 92, 98, 96, 98));
+
+var output = 'name\ttotal\tavg\n';
+
+for(var i in students){
+	output += students[i].toString() + '\n';
+}
+console.log(output);
+	
+</script>
+</body>
+</html>

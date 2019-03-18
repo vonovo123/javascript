@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+		for ( var i in students) {
+			students[i].getSum = function(){
+				return this.korean + this.math + this.english + this.science;
+			};
+
+			students[i].getAverage = function(){
+				return this.getSum() / 4;
+			}
+		}
+
+</script>
+</body>
+</html>

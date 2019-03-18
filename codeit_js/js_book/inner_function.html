@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>내부함수 정리</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	function pythagoras(width, height){
+		function square(x){
+		return x * x;
+		}
+		return Math.sqrt(square(width) + square(height));
+	}
+	console.log(pythagoras(10,10));
+
+</script>
+</body>
+</html>

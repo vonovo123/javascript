@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var primitiveNumber = 273;
+	var objectNumber = new Number(273);
+
+	Number.prototype.method = function(){
+		return 'Method on prototype';
+	};
+
+	var output = '';
+
+	output += primitiveNumber.method() + '\n';
+	output += objectNumber.method();
+
+	console.log(output);
+</script>
+</body>
+</html>

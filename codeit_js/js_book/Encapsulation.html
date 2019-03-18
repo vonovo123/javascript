@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function Rectangle(w, h){
+		var width = w;
+		var height = h;
+
+		this.getWidth = function(){return width};
+		this.getHeight = function(){return height};
+		this.setWidth = function(w){
+			if(w < 0){
+				throw 'Width cannot be negative.';
+			} else {
+			width = w;
+			}
+		}
+
+		this.setHeight = function(h){
+			if(h < 0){
+				throw 'Height cannot be negative';
+			}else{
+			height = h;
+			}
+		}				
+	}
+
+	Rectangle.prototype.getArea = function(){
+		return this.getWidth() + this.getHeight();
+	}
+
+	var rectangle = new Rectangle(5, 7);
+	alert('AREA ' + rectangle.getArea() );
+</script>
+</body>
+</html>

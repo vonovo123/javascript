@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>setTimeout변수 주의사항</title>
+</head>
+<body>
+<script type="text/javascript">
+	//i를 변수로 setTimeOut 작동안함
+	/* for(var i = 0; i < 3; i ++){
+		setTimeout(alert(i), 1000 * i);
+	}*/
+	// i값 최대값으로 고정
+	/* for(let i = 0 ; i < 3; i ++ ){
+			setTimeout(() => {alert(i)}, 1000*i);
+	}*/
+	for(var i = 0; i < 3; i ++ ){
+		((i) => {
+			setTimeout(() =>{alert(i);}, 1000 * i)
+		})(i);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	// in
+	var output = '';
+	var student = {
+		name: 'youn',
+		korean : 92,
+		math : 98,
+		english : 96,
+		science: 98
+	};
+
+	output += "'name' in studnet: " + ('name' in student) + '\n';
+	output += "'sex' in studnet: " + ('sex' in student) + '\n';
+	console.log(output);
+
+	var ouput = '';
+	with (student){
+		output += 'name: ' + name + '\n';
+		output += 'korean: ' + korean + '\n';
+		output += 'math: ' + math + '\n';
+		output += 'english: ' + english + '\n';
+		output += 'science: ' + science + '\n';
+
+
+	}
+	console.log(output);
+
+</script>
+</body>
+</html>
